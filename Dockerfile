@@ -3,7 +3,7 @@ FROM ubuntu:14.04
 MAINTAINER i@p-nitrite.net
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get -y install language-pack-ja-base language-pack-ja make gcc autoconf build-essential
+RUN apt-get -y install language-pack-ja-base language-pack-ja make gcc autoconf build-essential software-properties-common
 RUN locale-gen ja_JP.UTF-8
 RUN dpkg-reconfigure locales
 RUN echo "Asia/Tokyo" > /etc/timezone
